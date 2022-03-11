@@ -11,8 +11,10 @@ This project is not affiliated with, or endorsed by, elementary OS. It was creat
 
 ## Usage
 
+To create a new project from a template:
+
 ```bash
-TODO
+$ elementary-os-archetype create <template_name>
 ```
 
 ## Provided templates
