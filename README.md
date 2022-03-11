@@ -38,5 +38,5 @@ There's an existing project named [Watson](https://github.com/small-tech/watson)
 
 1. Create a **standalone application** that can be run from anywhere without needing to first clone/copy a project directory
 2. Be **Flatpak-centric**. While performing Ninja builds directly during development is marginally faster, the overhead for running flatpak-builder is low and provides a faster feedback loop for any sandbox issues in your application.
-3. **No extra fluff**. Should not look to install any extra applications (e.g. VSCodium). I have a separate project dedicated to ensuring my workstation is in a good state: [elementary-os-config](https://github.com/avojak/avojak/elementary-os-config).
+3. **No extra fluff**. Should not look to install any extra applications (e.g. VSCodium). I have a separate project dedicated to ensuring my workstation is in a good state: [elementary-os-config](https://github.com/avojak/elementary-os-config).
 3. Various code-style and structure differences
