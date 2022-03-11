@@ -1,0 +1,2 @@
+# Refer to the module in the src directory directly
+/usr/bin/env python3 -m src.elementary_os_archetype.cli $@
