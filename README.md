@@ -15,15 +15,15 @@ This project is not affiliated with, or endorsed by, elementary OS. It was creat
 TODO
 ```
 
-## Provided archetypes
+## Provided templates
 
-The application comes with the following archetypes:
+The application comes with the following templates:
 
 | Name | Description |
 | ---- | ----------- |
 | `simple` | Simple application with a GUI |
 
-Additional user-defined archetypes can be added by placing them in `~/.elementary-os-archetype`:
+Additional user-defined templates can be added by placing them in `~/.elementary-os-archetype`:
 
 ```plaintext
 ~/.elementary-os-archetype
