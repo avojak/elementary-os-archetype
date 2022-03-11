@@ -23,11 +23,34 @@ The application comes with the following templates:
 | ---- | ----------- |
 | `simple` | Simple application with a GUI |
 
-Additional user-defined templates can be added by placing them in `~/.elementary-os-archetype`:
+Default variable values can be specified in `~/.elementary-os-archetype/defaults.yaml`:
+
+```yaml
+variables:
+  - name: dev_username
+    value: avojak
+  - name: dev_fullname
+    value: Andrew Vojak
+```
+
+## User-defined templates
+
+Additional user-defined templates can be added by placing them in `~/.elementary-os-archetype/archetypes/`:
 
 ```plaintext
-~/.elementary-os-archetype
+~/.elementary-os-archetype/archetypes/
 TODO
+```
+
+Within the directory for each template, there must exist an `archetype.yaml` file which defines the name, description, and which variables to substitute during the creation process:
+
+```yaml
+name: simple
+description: Simple application with a GUI
+variables:
+  - repo_name
+  - dev_username
+  - dev_fullname
 ```
 
 ----
