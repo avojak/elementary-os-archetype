@@ -1,6 +1,0 @@
-name: simple
-description: Simple application with a GUI
-variables:
-  - repo_name
-  - dev_username
-  - dev_fullname

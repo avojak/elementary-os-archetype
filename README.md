@@ -17,6 +17,14 @@ To create a new project from a template:
 $ elementary-os-archetype create <template_name>
 ```
 
+### Development
+
+To run the current development code rather than the installed application:
+
+```bash
+$ ./bin/elementary-os-archetype-dev ...
+```
+
 ## Provided templates
 
 The application comes with the following templates:
@@ -25,34 +33,67 @@ The application comes with the following templates:
 | ---- | ----------- |
 | `simple` | Simple application with a GUI |
 
-Default variable values can be specified in `~/.elementary-os-archetype/defaults.yaml`:
+<!-- Default variable values can be specified in `~/.elementary-os-archetype/defaults.yaml`:
 
 ```yaml
 variables:
-  - name: dev_username
+  - name: org_username
     value: avojak
-  - name: dev_fullname
+  - name: org_fullname
     value: Andrew Vojak
-```
+``` -->
 
 ## User-defined templates
 
-Additional user-defined templates can be added by placing them in `~/.elementary-os-archetype/archetypes/`:
+Additional user-defined templates can be added by placing them in `~/.elementary-os-archetype/templates/`:
 
 ```plaintext
-~/.elementary-os-archetype/archetypes/
+~/.elementary-os-archetype/templates/
 TODO
 ```
 
-Within the directory for each template, there must exist an `archetype.yaml` file which defines the name, description, and which variables to substitute during the creation process:
+Within the directory for each template, there must exist an `archetype.yaml` file which defines the name, description, and which extra variables to prompt the user for during the creation process:
 
 ```yaml
-name: simple
-description: Simple application with a GUI
-variables:
-  - repo_name
-  - dev_username
-  - dev_fullname
+name: custom
+description: My custom application template
+extra_variables:
+  - my_variable
+```
+
+### Built-in variables
+
+The following variables are built-in and do not need to be called-out in your `archetype.yaml` file:
+
+| Name | Description |
+| ---- | ----------- |
+| `project_display_name` | The user-friendly project name (e.g. "My Application") |
+| `project_simple_name` | The lowercase version of the display name without spaces (e.g. "my-application") |
+| `project_namespace` | The class namespace (e.g. "MyApplication") |
+| `project_id` | The reverse domain name notation (RDNN) project ID (e.g. "com.github.avojak.my-application") |
+| `org_username` | Your developer username (e.g. "avojak") |
+| `org_fullname` | Your full name (e.g. "Andrew Vojak") |
+| `org_website` | Your website (e.g. "https://avojak.com") |
+| `org_email` | Your email address (e.g. "andrew.vojak@gmail.com") |
+
+TODO: Should `project_id` just be the `rdnn_base`, and then build out `project_id` from `rdnn_base`, `project_simple_name`, and `org_username`?
+
+## Profiles
+
+`~/.elementary-os-archetype/profiles.yaml`
+
+```yaml
+profiles:
+  - name: default
+    variables:
+      - name: org_username
+        value: avojak
+      - name: org_fullname
+        value: Andrew Vojak
+      - name: dev_email
+        value: andrew.vojak@gmail.com
+      - name: dev_website
+        value: https://avojak.com
 ```
 
 ----

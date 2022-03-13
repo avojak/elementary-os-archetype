@@ -8,6 +8,7 @@ import yaml
 class Archetype():
 
     def __init__(self, dir):
+        self.path = dir
         with open(os.path.join(dir, 'archetype.yaml'), 'r') as archetype_descriptor:
             try:
                 self.descriptor = yaml.safe_load(archetype_descriptor)

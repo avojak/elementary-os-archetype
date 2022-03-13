@@ -1,0 +1,20 @@
+app-id: {{cookiecutter.project_id}}
+
+runtime: io.elementary.Platform
+runtime-version: '6.1'
+sdk: io.elementary.Sdk
+
+command: {{cookiecutter.project_id}}
+
+finish-args:
+  - '--share=ipc'
+  - '--share=network'
+  - '--socket=fallback-x11'
+  - '--socket=wayland'
+
+modules:
+  - name: {{cookiecutter.project_simple_name}}
+    buildsystem: meson
+    sources:
+      - type: dir
+        path: .

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/com/github/{{cookiecutter.org_username}}/{{cookiecutter.project_simple_name}}">
+  </gresource>
+</gresources>
