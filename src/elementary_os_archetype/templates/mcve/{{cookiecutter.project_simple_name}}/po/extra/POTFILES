@@ -1,0 +1,2 @@
+data/{{cookiecutter.project_id}}.desktop.in.in
+data/{{cookiecutter.project_id}}.appdata.xml.in.in

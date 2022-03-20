@@ -32,6 +32,7 @@ The application comes with the following templates:
 | Name | Description |
 | ---- | ----------- |
 | `simple` | Simple application with a GUI |
+| `mcve` | Empty application for creating a minimum, complete, verifiable example (MCVE) of an issue |
 
 <!-- Default variable values can be specified in `~/.elementary-os-archetype/defaults.yaml`:
 
