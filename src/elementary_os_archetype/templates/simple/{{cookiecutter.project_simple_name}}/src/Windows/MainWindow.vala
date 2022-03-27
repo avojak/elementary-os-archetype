@@ -30,6 +30,7 @@ public class {{cookiecutter.project_namespace}}.Windows.MainWindow : Hdy.Window 
 
     public MainWindow ({{cookiecutter.project_namespace}}.Application application) {
         Object (
+            title: Constants.APP_NAME,
             application: application,
             app: application,
             border_width: 0,
